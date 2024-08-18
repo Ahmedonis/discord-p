@@ -1,0 +1,103 @@
+body {
+    height: 100vh; /* Full height */
+    background: linear-gradient(45deg, 
+                #002200, /* Dark Green */
+                black
+    );
+
+    animation: gradientAnimation 9s ease infinite;
+}
+
+/* Define the animation for the gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+    }
+    50% {
+        background-size: 300% 300%;
+        background-position: 100% 100%;
+    }
+    100% {
+        background-size: 200% 200%;
+        background-position: 0% 0%;
+    }
+}
+
+.server-name{
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+.server-name-div{
+    display: flex;
+    justify-content: center;
+}
+
+#nav-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    background-color: transparent;
+}
+
+#nav-div{
+    display: flex;
+    width: 1150px;
+    border: solid white;
+    border-width: 2px;
+    border-radius: 100px;
+    height: 40px;
+    box-shadow: 0px 0px 26px 1px rgba(7,255,0,0.37);
+    -webkit-box-shadow: 0px 0px 26px 1px rgba(7,255,0,0.37);
+    -moz-box-shadow: 0px 0px 26px 0px rgba(7,255,0,0.37);
+    background-color: transparent;
+}
+
+#pfp{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border-radius: 100%;
+    transition-duration: 0.2s;
+}
+
+#pfp-div{
+    width: 40px;
+    display: flex;
+}
+
+#pfp:hover{
+    opacity: 70%;
+}
+
+#dis-name-div{
+    position: relative;
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+    background: none;
+    background-color: transparent;
+}
+
+#hover-div {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: none;
+    background-color: transparent;
+}
+
+#dis-name{
+    color: white;
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    white-space: nowrap;
+    background-color: transparent;
+    text-shadow: 0px 5px 4px rgb(39, 130, 36);
+}
+#pfp-div:hover ~ #hover-div #dis-name-div {
+    transform: translateX(0);
+}
