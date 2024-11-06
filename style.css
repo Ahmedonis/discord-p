@@ -1,12 +1,26 @@
-body {
-    height: 100vh; /* Full height */
-    background: linear-gradient(45deg, 
-                #002200, /* Dark Green */
-                black
-    );
-
-    animation: gradientAnimation 9s ease infinite;
+html{
+    scroll-behavior: smooth;
 }
+
+body{
+    margin: 0px;
+}
+
+#animation{
+    height: 688px; /* Adjust height as needed */
+    width: 100%;
+    background: linear-gradient(45deg, #002201, black);
+    animation: gradientAnimation 9s ease infinite;
+    background-size: 200% 200%; /* Ensure the animation looks correct */
+    padding-bottom: 83.49999px;
+}
+#nd-section{
+    height: 100%;
+    width: 100%;
+    background-color: #a7eba9;
+    padding-bottom: 83.5px;
+}
+
 
 /* Define the animation for the gradient */
 @keyframes gradientAnimation {
@@ -24,36 +38,32 @@ body {
     }
 }
 
-.server-name{
-    color: rgb(255, 255, 255);
-    font-family: sans-serif;
-    font-weight: bolder;
-}
-
-.server-name-div{
-    display: flex;
-    justify-content: center;
-}
-
 #nav-bar{
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 15px;
-    background-color: transparent;
 }
 
 #nav-div{
     display: flex;
-    width: 1150px;
+    width: 90%;
     border: solid white;
     border-width: 2px;
     border-radius: 100px;
     height: 40px;
-    box-shadow: 0px 0px 26px 1px rgba(7,255,0,0.37);
-    -webkit-box-shadow: 0px 0px 26px 1px rgba(7,255,0,0.37);
-    -moz-box-shadow: 0px 0px 26px 0px rgba(7,255,0,0.37);
-    background-color: transparent;
+    box-shadow: 0px 0px 26px 1px green;
+    -webkit-box-shadow: 0px 0px 26px 1px green;
+    -moz-box-shadow: 0px 0px 26px 0px green;
+    position: fixed;
+    background: linear-gradient(45deg, 
+    #223822, /* Dark Green */
+    rgb(15, 28, 14)
+);
+    transition: 0.5s ease; 
+    animation: gradientAnimation 9s ease infinite;
+    margin-top: 15px;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+    position: fixed;
 }
 
 #pfp{
@@ -61,7 +71,7 @@ body {
     height: 40px;
     object-fit: cover;
     border-radius: 100%;
-    transition-duration: 0.2s;
+    transition-duration: 0.1s;
 }
 
 #pfp-div{
@@ -76,17 +86,14 @@ body {
 #dis-name-div{
     position: relative;
     transform: translateX(-100%);
-    transition: transform 0.4s ease;
-    background: none;
-    background-color: transparent;
+    transition: transform 0.3s ease;
+
 }
 
 #hover-div {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: none;
-    background-color: transparent;
 }
 
 #dis-name{
@@ -95,9 +102,245 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     white-space: nowrap;
-    background-color: transparent;
     text-shadow: 0px 5px 4px rgb(39, 130, 36);
 }
 #pfp-div:hover ~ #hover-div #dis-name-div {
     transform: translateX(0);
+}
+
+#server-name1{
+    color: rgb(0, 194, 19);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 130px;
+    border: none;
+    margin-bottom: 0px;
+}
+
+#server-name2{
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 90px;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    border: none;
+}
+
+#logo{
+    border-radius: 100%;
+    margin-left: 40px;
+    width: 170px;
+    height: 170px;
+    margin-bottom: -30px;
+    object-fit: cover;
+    transition-duration: 0.1s;
+}
+
+#logo:hover{
+    opacity: 60%;
+    filter: blur(1px);
+}
+
+#st-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+}
+
+#server-name-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+#server-name-div2{
+    display: flex;
+    margin-bottom: 0px;
+}
+
+#logo-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#name-image{
+    display: flex;
+    justify-content: center;
+    margin-bottom: -20px;
+}
+
+#text-section1{}
+
+#text1{
+    color: white;
+    margin-top: 0px;
+    margin-bottom: -6px;
+    color: rgb(255, 255, 255);
+    font-family: sans-serif;
+    font-weight: bolder;
+}
+
+#discord-icon{
+    width: 15px;
+}
+
+#insights-div{
+    display: flex;
+    justify-content: center;
+}
+
+#insights{
+    margin-top: 100px;
+    margin-bottom: 80px;
+    color: 446945;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 130px;
+    border: none;
+}
+
+#action-btn{
+    border: solid green;
+    background-color: white;
+    background-color: transparent;
+    color: green;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    transition-duration: 0.2s;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#action-btn:hover{
+    color: white;
+    background-color: #087400;
+}
+
+#action-btn:active{
+    background-color: #329c2a;
+    border: solid #329c2a;
+}
+
+#btn-div{
+    display: flex;
+    justify-content: center;
+}
+
+#logo-div:hover #logo {
+    opacity: 0.3;
+    filter: blur(3px);
+}
+
+#logo-div:hover #join-here-div {
+    opacity: 1;
+}
+
+#discord-link{
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: white;
+    font-size: 10px;
+}
+
+#discord-link:link, #discord-link:visited, #dicord-link:hover, #discord-link:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#coding-link{
+    text-decoration: none;
+    color: inherit;
+    background-color: #9685a0;
+}
+
+#coding-link:hover{
+    background-color: rgb(154, 149, 247);
+}
+
+#coding-link:link, #coding-link:visited, #coding-link:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+#text2-div{
+    display: flex;
+    justify-content: center;
+    margin-left: px;
+}
+
+#text2{
+    color: #002201;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+#join-div{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#join-btn{
+    border: solid rgb(255, 255, 255);
+    background-color: green;
+    background-color: white;
+    color: green;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    transition-duration: 0.2s;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#join-btn:hover{
+    color: white;
+    background-color: transparent;
+    border: solid white;
+}
+
+#join-btn:active{
+    background-color: #329c2a;
+    border: solid #329c2a;
+}
+
+#channel-vid{
+    width: 200px;
+    border: solid green; /* Keep the box content transparent */ 
+    border-radius: 10px;
+    box-sizing: border-box;
+    transition-duration: 0.2s;
+}
+
+#channel-vid:hover{
+    box-shadow: 0 0 15px #005703;
+    border: solid #002201;
+}
+
+#insights-text{
+    color: #446945;
+    font-family: sans-serif;
+    font-weight: bolder;
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+#insights-text-div{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
 }
